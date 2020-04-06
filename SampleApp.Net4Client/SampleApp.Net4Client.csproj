@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{99C78209-9AF3-4499-BE96-AE48E9DAEA4B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>SampleApp.Net4Client</RootNamespace>
+    <AssemblyName>SampleApp.Net4Client</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Hiz.Windows.Forms.SharpTreeView, Version=1.7.0.0, Culture=neutral, PublicKeyToken=fcc90fbf924463a3, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Hiz.Windows.Forms.SharpTreeView.Design\bin\Debug\net40\Hiz.Windows.Forms.SharpTreeView.dll</HintPath>
+    </Reference>
+    <Reference Include="Hiz.Windows.Forms.SharpTreeView.Design">
+      <HintPath>..\Hiz.Windows.Forms.SharpTreeView.Design\bin\Debug\net40\Hiz.Windows.Forms.SharpTreeView.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdvancedExample.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AdvancedExample.designer.cs">
+      <DependentUpon>AdvancedExample.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BackgroundExpand.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BackgroundExpand.designer.cs">
+      <DependentUpon>BackgroundExpand.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ColumnHandling.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ColumnHandling.designer.cs">
+      <DependentUpon>ColumnHandling.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataTableExample\DataRowNode.cs" />
+    <Compile Include="DataTableExample\DataTableTreeExample.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DataTableExample\DataTableTreeExample.designer.cs">
+      <DependentUpon>DataTableTreeExample.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataTableExample\DataTableTreeModel.cs" />
+    <Compile Include="FolderBrowser.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FolderBrowser.designer.cs">
+      <DependentUpon>FolderBrowser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FolderBrowserModel.cs" />
+    <Compile Include="FolderItems.cs" />
+    <Compile Include="FolderItemSorter.cs" />
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyNode.cs" />
+    <Compile Include="PerformanceTest.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PerformanceTest.designer.cs">
+      <DependentUpon>PerformanceTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SimpleExample.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SimpleExample.designer.cs">
+      <DependentUpon>SimpleExample.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SlowModel.cs" />
+    <EmbeddedResource Include="AdvancedExample.resx">
+      <DependentUpon>AdvancedExample.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BackgroundExpand.resx">
+      <DependentUpon>BackgroundExpand.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ColumnHandling.resx">
+      <DependentUpon>ColumnHandling.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataTableExample\DataTableTreeExample.resx">
+      <DependentUpon>DataTableTreeExample.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FolderBrowser.resx">
+      <DependentUpon>FolderBrowser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PerformanceTest.resx">
+      <DependentUpon>PerformanceTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="SimpleExample.resx">
+      <DependentUpon>SimpleExample.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="App.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
